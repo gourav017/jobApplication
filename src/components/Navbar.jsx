@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <Flex justifyContent="space-evenly" bg="gray.200" p={2} >
       {links.map((l) => (
-        <NavLink to={l.to}>
+        <NavLink to={l.to} key={l.title}>
           {" "}
           <Button colorScheme='twitter'>{l.title}</Button>
         </NavLink>

@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import {
-  FormControl,
-  FormLabel,
-  Heading,
-  Input,
-  Select,
-  Button,
-} from "@chakra-ui/react";
+import { FormLabel, Heading, Input, Select, Button } from "@chakra-ui/react";
 
 const PosttheJob = () => {
   const [postThejob, setpostThejob] = useState({});
@@ -21,10 +14,44 @@ const PosttheJob = () => {
   };
 
   const postjob = () => {
-    return axios
-      .post("http://localhost:8080/jobs", postThejob)
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log(err));
+
+    console.log(postThejob);
+
+   let {Company,city,location,Role,level,position,Language,Contract} = postThejob
+
+  
+   console.log(Company,city,location,Role,level,position,Language,Contract);
+    if (Company===undefined || Company.trim().length===0) {
+      alert("please fill the name of the Company");
+    } 
+    else if(city===undefined ||city.trim().length===0){
+      alert("please fill the city")
+    }
+    else if(location===undefined || location.trim().length===0){
+      alert("please fill the location")
+    }
+    else if(Role===undefined){
+      alert("please fill the Role")
+
+    }
+    else if(level===undefined){
+      alert("please fill the level")
+    }
+    else if(position===undefined ||position.trim().length===0){
+       alert("please fill the postion!")
+    }
+    else if(Language===undefined ||Language.trim().length===0){
+      alert("please fill the language")
+    }
+    else if(Contract===undefined){
+      alert("please fill the Contract")
+    }
+    else {
+      return axios
+        .post("http://localhost:8080/jobs", postThejob)
+        .then((res) => alert("job poseted sucessfully!"))
+        .catch((err) => alert("something went wrong!"));
+    }
   };
 
   const handleSubmit = (e) => {
@@ -33,14 +60,14 @@ const PosttheJob = () => {
   };
 
   return (
-    <FormControl onSubmit={handleSubmit} w="50%" margin="auto">
+    <form onSubmit={handleSubmit} style={{ width: "50%", margin: "auto" }}>
       <Heading as="h2" size="2xl">
         POST THE JOB
       </Heading>
       <FormLabel>Company name</FormLabel>
       <Input
         type="text"
-        name="Company name"
+        name="Company"
         placeholder="enter company name here.."
         onChange={handleChange}
       />
@@ -90,7 +117,7 @@ const PosttheJob = () => {
       <Button type="submit" colorScheme="teal" size="lg">
         Submit
       </Button>
-    </FormControl>
+    </form>
   );
 };
 
