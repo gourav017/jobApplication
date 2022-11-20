@@ -1,28 +1,6 @@
 {
   "jobs": [
     {
-      "Company": "scto",
-      "city": "jaipur",
-      "location": "jabalpur",
-      "Role": "Frontend",
-      "level": "Junior",
-      "position": "reactjs developer",
-      "Language": "javaScript",
-      "Contract": "full time",
-      "id": 4
-    },
-    {
-      "Company": "fgh",
-      "city": "fgh",
-      "location": "fgh",
-      "Role": "Frontend",
-      "level": "Junior",
-      "position": "fgh",
-      "Language": "fgh",
-      "Contract": "full time",
-      "id": 5
-    },
-    {
       "Company": "ert",
       "city": "ert",
       "location": "ert",
@@ -31,7 +9,7 @@
       "position": "ert",
       "Language": "ert",
       "Contract": "part time",
-      "postedAt": "2022-11-20",
+      "postedAt": "2022-11-10",
       "id": 7
     }
   ]

@@ -46,4 +46,11 @@
 //       "id": 5
 //     }
 
-console.log(new Date());
+// console.log(new Date());
+
+var a = "2022-11&-10."
+let b = a.replace("&","")
+
+console.log();
+
+ 
