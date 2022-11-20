@@ -57,67 +57,6 @@
       "Language": "javaScript",
       "Contract": "full time",
       "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "id": 10
-    },
-    {
-      "id": 11
-    },
-    {
-      "id": 12
-    },
-    {
-      "id": 13
-    },
-    {
-      "Company name": "vg",
-      "id": 14
-    },
-    {
-      "Company": "sdf",
-      "city": "  ",
-      "location": "asdf",
-      "Role": "Frontend",
-      "position": "asdf",
-      "Language": "adf",
-      "Contract": "full time",
-      "level": "Junior",
-      "id": 15
-    },
-    {
-      "Company": "jjjj",
-      "city": "jjjj",
-      "location": "jjjjjj",
-      "position": "jjjj",
-      "Language": "jjjj",
-      "Role": "Frontend",
-      "level": "Junior",
-      "Contract": "full time",
-      "id": 16
-    },
-    {
-      "Company": "ggg",
-      "city": "gggg",
-      "location": "ggggg",
-      "position": "gggg",
-      "Language": "ggggg",
-      "Role": "Frontend",
-      "level": "Junior",
-      "Contract": "full time",
-      "id": 17
     }
   ]
 }
