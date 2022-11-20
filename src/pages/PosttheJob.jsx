@@ -44,6 +44,7 @@ const PosttheJob = () => {
     } else if (Contract === undefined) {
       alert("please fill the Contract");
     } else {
+      postThejob.postedAt= new Date().toJSON().slice(0, 10);
       return axios
         .post("http://localhost:8080/jobs", postThejob)
         .then((res) => alert("job poseted sucessfully!"))
