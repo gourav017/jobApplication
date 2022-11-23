@@ -14,8 +14,16 @@ const Joblist = () => {
       .catch((err) => console.log(err));
   };
 
+  const datasortbyrole = async () => {
+    return await axios
+      .get("http://localhost:8080/jobs?_sort=role&_order=desc")
+      .then((res) => setJobs(res.data))
+      .catch((err) => console.log(err));
+  };
+
   useEffect(() => {
     data();
+    datasortbyrole()
   }, []);
 
   return (

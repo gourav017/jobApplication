@@ -1,16 +1,28 @@
 {
   "jobs": [
     {
-      "Company": "ert",
-      "city": "ert",
-      "location": "ert",
-      "Role": "FullStack",
+      "id": 1,
+      "Company": "Jinny",
+      "postedAt": "2021-09-09",
+      "city": "Ludhiana",
+      "location": "Belgium",
+      "role": "FullStack",
       "level": "Junior",
-      "position": "ert",
-      "Language": "ert",
-      "Contract": "part time",
-      "postedAt": "2022-11-10",
-      "id": 7
+      "contract": "Full Time",
+      "position": "Junior Frontend Developer",
+      "language": "Java"
+    },
+    {
+      "Company": "gigin",
+      "city": "delhi",
+      "location": "bhopal",
+      "Role": "Backend",
+      "level": "Senior",
+      "position": "nodejs developer",
+      "Language": "java",
+      "Contract": "full time",
+      "postedAt": "2022-11-23",
+      "id": 2
     }
   ]
 }
