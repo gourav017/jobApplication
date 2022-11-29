@@ -2,8 +2,6 @@ import React from "react";
 
 const DatetoDay = ({ date }) => {
 
-
-
   let removesdashes = ''
 
   for(var i=0 ; i<date.length ; i++){
@@ -25,7 +23,7 @@ const DatetoDay = ({ date }) => {
   }
   console.log(currentremovesdashes);
 
-  let ConvertDatetoDays = Number(currentremovesdashes)- Number(removesdashes) /30;
+  let ConvertDatetoDays = Number(currentremovesdashes)- Number(removesdashes);
   return <div>{`${ConvertDatetoDays} d ago`}</div>;
 };
 

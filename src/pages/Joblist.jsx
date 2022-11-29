@@ -14,20 +14,28 @@ const Joblist = () => {
       .catch((err) => console.log(err));
   };
 
-  const datasortbyrole = async () => {
+  const handleSortbyrole = async (e) => {
+    let value = e.target.value;
     return await axios
-      .get("http://localhost:8080/jobs?_sort=role&_order=desc")
+      .get(`http://localhost:8080/jobs?_sort=${value}&_order=desc`)
       .then((res) => setJobs(res.data))
       .catch((err) => console.log(err));
   };
 
   useEffect(() => {
     data();
-    datasortbyrole()
   }, []);
 
   return (
     <div>
+      <select onChange={handleSortbyrole}>
+        <option value="">sort by</option>
+        <option value="Role">Role</option>
+        <option value="Company">Company</option>
+        <option value="city">city</option>
+        <option value="location">location</option>
+        <option value=""></option>
+      </select>
       {Jobs.map((elem) => (
         <Flex
           w="50%"
@@ -43,7 +51,7 @@ const Joblist = () => {
           />
           <Box>
             <Text as="b" color="teal.400">
-              {elem.Company}
+             name-- {elem.Company}
             </Text>
             <br />
             <Text fontSize="xl" as="b">
@@ -53,9 +61,9 @@ const Joblist = () => {
           </Box>
           <Spacer />
           <div style={{ display: "flex" }}>
-            <Text>{elem.level}</Text>
-            <Text>{elem.Role}</Text>
-            <Text>{elem.Language}</Text>
+            <Text>level--{elem.level}</Text>
+            <Text>role--{elem.Role}</Text>
+            <Text>language{elem.Language}</Text>
           </div>
         </Flex>
       ))}
