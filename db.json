@@ -2,9 +2,9 @@
   "jobs": [
     {
       "id": 1,
-      "Company": "Jinny",
+      "Company": "zinny",
       "postedAt": "2021-09-09",
-      "city": "Ludhiana",
+      "city": "ludhiana",
       "location": "Belgium",
       "Role": "FullStack",
       "level": "Junior",
@@ -16,13 +16,37 @@
       "Company": "gigin",
       "city": "delhi",
       "location": "bhopal",
-      "Role": "Backend",
+      "Role": "backend",
       "level": "Senior",
       "position": "nodejs developer",
       "Language": "java",
       "Contract": "full time",
       "postedAt": "2022-11-23",
       "id": 2
+    },
+    {
+      "Company": "shree gold",
+      "city": "sagar",
+      "location": "sagar",
+      "Role": "Frontend",
+      "level": "Junior",
+      "position": "Frondend dev",
+      "Language": "javaScript",
+      "Contract": "full time",
+      "postedAt": "2022-11-29",
+      "id": 3
+    },
+    {
+      "Company": "LL",
+      "city": "SA",
+      "location": "AS",
+      "Role": "Frontend",
+      "level": "Junior",
+      "position": "ADS",
+      "Language": "ASD",
+      "Contract": "full time",
+      "postedAt": "2022-11-29",
+      "id": 4
     }
   ]
 }

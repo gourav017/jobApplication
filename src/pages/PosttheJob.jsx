@@ -9,7 +9,7 @@ const PosttheJob = () => {
     let { name, value } = e.target;
     setpostThejob({
       ...postThejob,
-      [name]: value,
+      [name]:value,
     });
   };
 

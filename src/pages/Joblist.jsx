@@ -1,4 +1,4 @@
-import { Avatar, Box, Flex, Spacer, Text } from "@chakra-ui/react";
+import { Avatar, Box, Button, Flex, Spacer, Text } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
@@ -17,7 +17,15 @@ const Joblist = () => {
   const handleSortbyrole = async (e) => {
     let value = e.target.value;
     return await axios
-      .get(`http://localhost:8080/jobs?_sort=${value}&_order=desc`)
+      .get(`http://localhost:8080/jobs?_sort=${value}&_order=asc`)
+      .then((res) => setJobs(res.data))
+      .catch((err) => console.log(err));
+  };
+
+  const handlebyFilter=async (e) => {
+    let value = e.target.value;
+    return await axios
+      .get(`http://localhost:8080/jobs?level=${value}`)
       .then((res) => setJobs(res.data))
       .catch((err) => console.log(err));
   };
@@ -34,7 +42,11 @@ const Joblist = () => {
         <option value="Company">Company</option>
         <option value="city">city</option>
         <option value="location">location</option>
-        <option value=""></option>
+      </select>
+      <select onChange={handlebyFilter}>
+        <option value="">filter by</option>
+        <option value="Junior">Junior</option>
+        <option value="Senior">senior</option>
       </select>
       {Jobs.map((elem) => (
         <Flex
@@ -51,19 +63,21 @@ const Joblist = () => {
           />
           <Box>
             <Text as="b" color="teal.400">
-             name-- {elem.Company}
+            {elem.Company}
+            {elem.city}
             </Text>
             <br />
             <Text fontSize="xl" as="b">
               {elem.position}
             </Text>
+            <Text>{elem.location}</Text>
             <DatetoDay date={elem.postedAt} />
           </Box>
           <Spacer />
           <div style={{ display: "flex" }}>
-            <Text>level--{elem.level}</Text>
-            <Text>role--{elem.Role}</Text>
-            <Text>language{elem.Language}</Text>
+            <Text>{elem.level}</Text>
+            <Text>{elem.Role}</Text>
+            <Text>{elem.Language}</Text>
           </div>
         </Flex>
       ))}
