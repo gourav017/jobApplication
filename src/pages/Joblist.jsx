@@ -44,7 +44,7 @@ const Joblist = () => {
         <option value="location">location</option>
       </select>
       <select onChange={handlebyFilter}>
-        <option value="">filter by</option>
+        <option value="#">filter by</option>
         <option value="Junior">Junior</option>
         <option value="Senior">senior</option>
       </select>
